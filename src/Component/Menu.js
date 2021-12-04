@@ -26,7 +26,7 @@ export default function Menu() {
   }, []);
 
   const divStyle = {
-    top: `${highlightTopPosition}px`,
+    top: highlightTopPosition
   };
 
   let className = startAnimate ? "sidebar__highlight__animate" : "";
@@ -56,7 +56,7 @@ export default function Menu() {
             onClick={() => onClickTab(1)}
           >
             <span className={currCount === 1 && "textactive"}>
-              <AiOutlineArrowRight className="icons" /> Contact
+              <AiOutlineArrowRight className="icons" /> Service
             </span>
           </a>
           <a
@@ -65,7 +65,7 @@ export default function Menu() {
             onClick={() => onClickTab(2)}
           >
             <span className={currCount === 2 && "textactive"}>
-              <AiOutlineArrowRight className="icons" /> News
+              <AiOutlineArrowRight className="icons" /> Contact
             </span>
           </a>
           <a
