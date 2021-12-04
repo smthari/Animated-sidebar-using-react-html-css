@@ -69,20 +69,24 @@ body {
   padding: 15px 30px;
   text-decoration: none;
 }
+
 .sidebar a span {
   font-size: 14px;
   position: relative;
   z-index: 999;
   transition: all 0.2s;
 }
+
 .sidebar a span .icons {
   opacity: 0;
   transition: opacity 0.5s;
   vertical-align: middle;
 }
+
 .sidebar a:hover span {
   margin-left: 10px;
 }
+
 .sidebar a:hover span .icons {
   opacity: 1;
 }
@@ -90,6 +94,7 @@ body {
 .sidebar a.active {
   color: white;
 }
+
 .sidebar a.active span .icons {
   opacity: 1;
 }
@@ -98,10 +103,6 @@ body {
   margin-left: 10px;
 }
 
-/* .textactive .sidebar a.active span {
-  margin-right: 5px;
-}
- */
 .textactive::before {
   content: "";
 }
