@@ -10,7 +10,8 @@ export default function Menu() {
     setStartAnimate(false);
     setCurrCount(count);
     setStateHighlightTopPosition(count * 52);
-    
+    console.log(count);
+
     setTimeout(() => {
       setStartAnimate(true);
     }, 100);
@@ -28,10 +29,7 @@ export default function Menu() {
     top: `${highlightTopPosition}px`,
   };
 
-  let className = `sidebar__highlight 
-  /* ${startAnimate ? "sidebar__highlight__animate" : ""} */
-  startAnimate ? "sidebar__highlight__animate" : ""
-  `;
+  let className = startAnimate ? "sidebar__highlight__animate" : "";
 
   return (
     <>
@@ -41,6 +39,7 @@ export default function Menu() {
             style={divStyle}
             className={`${className} sidebar__highlight `}
           ></div>
+
           <a
             href="#home"
             className={currCount === 0 && "active"}
