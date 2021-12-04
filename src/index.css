@@ -40,11 +40,12 @@ body {
   border-radius: 50%;
   position: absolute;
 }
+
 .sidebar__highlight__animate {
-  animation: test 0.2s cubic-bezier(0, 0, 1, 1) 0s forwards;
+  animation: FullWidthAnimation 0.2s cubic-bezier(0, 0, 1, 1) 0s forwards;
 }
 
-@keyframes test {
+@keyframes FullWidthAnimation {
   0% {
     height: 55px;
     width: 55px;
@@ -91,12 +92,16 @@ body {
 }
 .sidebar a.active span .icons {
   opacity: 1;
-  
 }
 
 .textactive {
   margin-left: 10px;
 }
+
+/* .textactive .sidebar a.active span {
+  margin-right: 5px;
+}
+ */
 .textactive::before {
   content: "";
 }

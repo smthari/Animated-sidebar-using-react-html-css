@@ -26,7 +26,7 @@ export default function Menu() {
   }, []);
 
   const divStyle = {
-    top: highlightTopPosition
+    top: highlightTopPosition,
   };
 
   let className = startAnimate ? "sidebar__highlight__animate" : "";
@@ -46,12 +46,11 @@ export default function Menu() {
             onClick={() => onClickTab(0)}
           >
             <span className={currCount === 0 && "text-active"}>
-              <AiOutlineArrowRight className="icons" />
-              Home
+              <AiOutlineArrowRight className="icons" /> Home
             </span>
           </a>
           <a
-            href="#home"
+            href="#service"
             className={currCount === 1 && "active"}
             onClick={() => onClickTab(1)}
           >
@@ -60,7 +59,7 @@ export default function Menu() {
             </span>
           </a>
           <a
-            href="#home"
+            href="#contact"
             className={currCount === 2 && "active"}
             onClick={() => onClickTab(2)}
           >
@@ -69,7 +68,7 @@ export default function Menu() {
             </span>
           </a>
           <a
-            href="#home"
+            href="#about"
             className={currCount === 3 && "active"}
             onClick={() => onClickTab(3)}
           >
