@@ -1,13 +1,110 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* @import url("https://kit-free.fontawesome.com/releases/latest/css/free.min.css"); */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: relative;
+  z-index: 0;
+  height: 300px;
+  overflow: auto;
+  transition: background-color 0.2s ease-in;
+}
+.sidebar__highlight {
+  height: 55px;
+  width: 55px;
+  background-color: #6a86d9;
+  border-radius: 50%;
+  position: absolute;
+}
+.sidebar__highlight__animate {
+  animation: test 0.2s cubic-bezier(0, 0, 1, 1) 0s forwards;
+}
+
+@keyframes test {
+  0% {
+    height: 55px;
+    width: 55px;
+    background-color: #6a86d9;
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 0 25px 25px 0;
+    width: 70px;
+  }
+  100% {
+    background-color: #62d9d9;
+    width: 200px;
+    border-radius: 0;
+  }
+}
+@keyframes animFullSidebar {
+  0% {
+    height: 55px;
+    width: 55px;
+    background-color: #6a86d9;
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 0 25px 25px 0;
+    width: 70px;
+  }
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+.sidebar a span {
+  font-size: 14px;
+  position: relative;
+  z-index: 999;
+  transition: all 0.2s;
+}
+.sidebar a span .icons {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.sidebar a:hover span {
+  margin-left: 10px;
+}
+.sidebar a:hover span .icons {
+  opacity: 1;
+}
+
+.sidebar a.active {
+  color: white;
+}
+.sidebar a.active span .icons {
+  opacity: 1;
+}
+
+.textactive {
+  margin-left: 10px;
+}
+.textactive::before {
+  content: "";
+}
+
+/* .container {
+  margin-left: 300px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+} */
