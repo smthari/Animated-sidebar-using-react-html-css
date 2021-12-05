@@ -1,4 +1,3 @@
-// import "./styles.css";
 import Menu from "./Component/Menu";
 
 export default function App() {

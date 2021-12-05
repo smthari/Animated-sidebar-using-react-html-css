@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// importing a icon from react icon
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Menu() {
@@ -6,17 +7,24 @@ export default function Menu() {
   const [highlightTopPosition, setStateHighlightTopPosition] = useState(0);
   const [currCount, setCurrCount] = useState(0);
 
+  // function for onclick
   const onClickTab = (count) => {
+    // after onclick setStartAnimate will be false
     setStartAnimate(false);
+    // setting a value of CurrCount to count
     setCurrCount(count);
+    // setting a setStateHightLightTopPosition based on count value * 52
     setStateHighlightTopPosition(count * 52);
+    // console logging value of count for testing
     console.log(count);
 
+    // setting timeout after onClick setStartAnimate will be true in 100ms
     setTimeout(() => {
       setStartAnimate(true);
     }, 100);
   };
 
+  // adding a useEffect to perform side effects automatically after 500ms setStartAnimated will be true on home element
   useEffect(() => {
     setTimeout(() => {
       setStartAnimate(true);
@@ -25,10 +33,12 @@ export default function Menu() {
     return () => {};
   }, []);
 
+  // inline styling value of top based on highlightTopPosition
   const divStyle = {
     top: highlightTopPosition,
   };
 
+  // condition in className when startAnimate true add a sidebar hightlight animate else nothing
   let className = startAnimate ? "sidebar__highlight__animate" : "";
 
   return (
@@ -37,6 +47,7 @@ export default function Menu() {
         <div className="sidebar">
           <div
             style={divStyle}
+            // adding multiple classes
             className={`${className} sidebar__highlight `}
           ></div>
 
